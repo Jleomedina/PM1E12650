@@ -26,7 +26,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.pm1e12650.Clases.Paises;
+import com.example.pm1e12650.Clases.Pais;
 import com.example.pm1e12650.configuraciones.SQLiteConexion;
 import com.example.pm1e12650.configuraciones.Transacciones;
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     Bitmap imagen;
 
     ArrayList<String> lista_paises;
-    ArrayList<Paises> lista;
+    ArrayList<Pais> lista;
 
     int codigoPaisSeleccionado;
 
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnVolver = (Button) findViewById(R.id.btnregresar);
 
         btnVolver.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), com.example.pm1e12650.ActivityPrincipal.class);
+            Intent intent = new Intent(getApplicationContext(),ActivityPrincipal.class);
             startActivity(intent);
         });
 
@@ -224,8 +224,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void ObtenerListaPaises() {
-        Paises pais = null;
-        lista = new ArrayList<Paises>();
+        Pais pais = null;
+        lista = new ArrayList<Pais>();
         //conexion = new SQLiteConexion(this, Transacciones.NameDatabase,null,1);
         db = conexion.getReadableDatabase();
 
@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
 
         while (cursor.moveToNext())
         {
-            pais = new Paises();
+            pais = new Pais();
 
             pais.setCodigo(cursor.getString(0));
             pais.setNombrePais(cursor.getString(1));

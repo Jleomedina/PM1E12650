@@ -1,13 +1,13 @@
 package com.example.pm1e12650.Clases;
 
-public class Paises {
+public class Pais {
     private String codigo;
     private String nombrePais;
 
-    public Paises() {
+    public Pais() {
     }
 
-    public Paises(String codigo, String nombrePais) {
+    public Pais(String codigo, String nombrePais) {
         this.codigo = codigo;
         this.nombrePais = nombrePais;
     }

@@ -31,12 +31,12 @@ public class ActivityPrincipal extends AppCompatActivity {
         btnpaises = (ImageButton) findViewById(btn_paises);
         btnSalir = (ImageButton) findViewById(btn_salir);
         btningresar.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(),com.example.pm1e12650.ActivityPrincipal.class);
+            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
         });
 
         btnlista.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(),com.example.pm1e12650.ActivityListadoContacto.class);
+            Intent intent = new Intent(getApplicationContext(),ActivityListadoContacto.class);
             startActivity(intent);
         });
 

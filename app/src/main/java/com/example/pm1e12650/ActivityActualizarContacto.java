@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.pm1e12650.Clases.Paises;
+import com.example.pm1e12650.Clases.Pais;
 import com.example.pm1e12650.configuraciones.SQLiteConexion;
 import com.example.pm1e12650.configuraciones.Transacciones;
 
@@ -32,7 +32,7 @@ public class ActivityActualizarContacto extends AppCompatActivity {
     EditText codigo, nombrecompleto, telefono, nota;
     Spinner codigoPais;
     ArrayList<String> lista_paises;
-    ArrayList<Paises> lista;
+    ArrayList<Pais> lista;
 
     int codigoPaisSeleccionado;
 
@@ -103,8 +103,8 @@ public class ActivityActualizarContacto extends AppCompatActivity {
 
 
     private void ObtenerListaPaises() {
-        Paises pais = null;
-        lista = new ArrayList<Paises>();
+        Pais pais = null;
+        lista = new ArrayList<Pais>();
         //conexion = new SQLiteConexion(this, Transacciones.NameDatabase,null,1);
         SQLiteDatabase db = conexion.getReadableDatabase();
 
@@ -112,7 +112,7 @@ public class ActivityActualizarContacto extends AppCompatActivity {
 
         while (cursor.moveToNext())
         {
-            pais = new Paises();
+            pais = new Pais();
 
             pais.setCodigo(cursor.getString(0));
             pais.setNombrePais(cursor.getString(1));

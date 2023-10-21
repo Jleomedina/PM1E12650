@@ -61,7 +61,6 @@
                 android:layout_height="37dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:entries="@array/paises"
                 android:spinnerMode="dialog" />
 
             <TextView
